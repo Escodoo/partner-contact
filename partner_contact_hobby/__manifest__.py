@@ -9,6 +9,7 @@
     "author": "Escodoo,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/partner-contact",
     "depends": [
+        "contacts",
         "partner_contact_personal_information_page",
     ],
     "data": [
