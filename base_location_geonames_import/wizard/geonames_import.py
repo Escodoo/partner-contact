@@ -1,8 +1,7 @@
 # Copyright 2014-2016 Akretion (Alexis de Lattre
 #                     <alexis.delattre@akretion.com>)
 # Copyright 2014 Lorenzo Battistini <lorenzo.battistini@agilebg.com>
-# Copyright 2017 Eficent Business and IT Consulting Services, S.L.
-#                <contact@eficent.com>
+# Copyright 2017 ForgeFlow, S.L. <.com>
 # Copyright 2018 Aitor Bouzas <aitor.bouzas@adaptivecity.com>
 # Copyright 2016-2020 Tecnativa - Pedro M. Baeza
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
@@ -225,7 +224,7 @@ class CityZipGeonamesImport(models.TransientModel):
                 if zip_vals not in zip_vals_list:
                     zip_vals_list.append(zip_vals)
             else:
-                old_zips.remove(zip_code.id)
+                old_zips.discard(zip_code.id)
         self.env["res.city.zip"].create(zip_vals_list)
         if not max_import:
             if old_zips:
